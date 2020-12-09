@@ -18,16 +18,15 @@ body {
     font-family: 'Zilla Slab', serif;
     font-size: 24px;
     font-weight: 400;
-    line-height: 1.25;
+    line-height: 1.5;
+
 
     color: #373737;
     background-color: #BAC4E4;
-
-    max-width: 1120px;
-    margin: 240px auto 400px auto;
-    padding: 0 60px;
-
     transition: background-color 0.5s;
+
+    width: 100%;
+    margin-top: 240px;
 }
 
 @media (max-width: 800px) {
@@ -103,11 +102,14 @@ header img {
 
 /* ---------- Each Section ---------- */
 section {
-    margin: 160px 0;
+    margin: 160px auto;
+    max-width: 1120px;
+
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    padding: 0 60px;
 }
 
 section:nth-child(odd) {
@@ -162,10 +164,72 @@ section img {
 h2 {
     font-size: 36px;
     font-weight: 600;
+    line-height: 1.2;
 }
 
 section.s2, section.section-cta {
     color: #ffffff;
+}
+
+/* ---------- CTA: Call to Action ---------- */
+
+.section-cta {
+    flex-direction: column;
+    padding-bottom: 40px;
+}
+
+.section-cta img {
+    width: 100%;
+    max-width: 100%;
+    padding-bottom: 40px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.create-account {
+    margin-right: 10px;
+}
+
+a.button {
+    text-align: center;
+    font-size: 0.9em;
+    flex: 1;
+    display: inline-block;
+    color: #373737;
+    background-color: #BAC4E4;
+    border-radius: 15px;
+    padding: 0.5em 1.5em;
+    transition: background-color 0.3s;
+}
+
+a.button:hover {
+    background-color: #5E6C9B;
+    color: white;
+}
+
+.create-account {
+    margin-right: 10px;
+}
+
+.log-in {
+    margin-left: 10px;
+}
+
+
+/* ---------- Footer ---------- */
+
+footer {
+    width: 100vw;
+    background-color: #d3d4d8;
+    text-align: center;
+    font-size: 0.7em;
+    padding: 30px 20px;
+
 }
 
 /* ---------- Stamps ---------- */

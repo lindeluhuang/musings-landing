@@ -6,30 +6,35 @@ const addMovement = function () {
     const midViewport = topViewport + (window.innerHeight / 2);
 
     sections.forEach((section, index) => {
-        // find middle of each section
-        const topSection = section.offsetTop;
-        const midSection = topSection + (section.offsetHeight / 2);
 
-        // compare how far we've scrolled from middle
-        const distanceToSection = midViewport - midSection;
+            // find middle of each section
+            const topSection = section.offsetTop;
+            const midSection = topSection + (section.offsetHeight / 2);
 
-        // pick tags to parallax
-        const image = section.querySelector("img");
-        const contentTag = section.querySelector("div");
+            // compare how far we've scrolled from middle
+            const distanceToSection = midViewport - midSection;
 
-        // weight down the distance
-        let rotation = distanceToSection / 100;
-        let contentDist = -1 * distanceToSection / 2;
+            // pick tags to parallax
+            const image = section.querySelector("img");
+            const contentTag = section.querySelector("div");
 
-        // for all even sections, rotate the other way
-        if (index % 2 == 1) {
-            rotation = rotation * -1;
+            // weight down the distance
+            let rotation = distanceToSection / 100;
+            let contentDist = -1 * distanceToSection / 2;
+
+                    //not the last one
+        console.log(index)
+        if (index < (sections.length - 1)) {
+            // for all even sections, rotate the other way
+            if (index % 2 == 1) {
+                rotation = rotation * -1;
+            }
+
+            // apply some parallax
+            image.style.transform = `rotate(${rotation}deg)`
+            contentTag.style.top = `${contentDist}px`
+            contentTag.style.transform = `rotate(${-1 * rotation}deg)`
         }
-
-        // apply some parallax
-        image.style.transform = `rotate(${ rotation }deg)`
-        contentTag.style.top = `${ contentDist }px`
-        contentTag.style.transform = `rotate(${ -1 * rotation }deg)`
 
 
         // change background color in middle of new section
