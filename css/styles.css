@@ -178,6 +178,14 @@ section.s2, section.section-cta {
     padding-bottom: 40px;
 }
 
+.section-cta h2 {
+    margin-bottom: 10px;
+}
+
+.section-cta p {
+    margin-top: 0px;
+}
+
 .cta-buttons {
     display: flex;
     flex-direction: row;
