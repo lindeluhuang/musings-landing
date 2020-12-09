@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@400;600&display=swap');
+
+@keyframes spin {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    100% { transform: translate(-50%, -50%) rotate(360deg);}
+  }
+  
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Zilla Slab', serif;
+    font-size: 24px;
+    font-weight: 400;
+    line-height: 1.25;
+
+    color: #373737;
+    background-color: #BAC4E4;
+
+    max-width: 1120px;
+    margin: 240px auto 400px auto;
+    padding: 0 60px;
+
+    transition: background-color 0.5s;
+}
+
+@media (max-width: 800px) {
+    body {
+        padding: 0 20px;
+    }
+
+}
+
+
+/* ---------- Header ---------- */
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+    text-align: center;
+    padding: 32px;
+    height: 64px;
+}
+
+header img {
+    width: 160px;
+    height: auto;
+    transition: width 0.5s;
+}
+
+.scrolled img {
+    width: 100px;
+}
+
+
+/* ---------- Each Section ---------- */
+section {
+    margin: 160px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+section:nth-child(odd) {
+    flex-direction: row-reverse;
+}
+
+section:nth-child(odd) div {
+    padding-right: 60px;
+}
+
+section:nth-child(even) div {
+    padding-left: 60px;
+}
+
+@media (max-width: 800px) {
+    section {
+        flex-direction: column;
+    }
+
+    section:nth-child(odd) {
+        flex-direction: column;
+    }
+
+    section:nth-child(odd) div {
+        padding-right: 0px;
+    }
+    
+    section:nth-child(even) div {
+        padding-left: 0px;
+    }
+
+}
+
+section div {
+    max-width: 660px;
+    position: relative;
+}
+
+section img {
+    width: calc(50vw - 60px);
+    max-width: 500px;
+    height: auto;
+    position: relative;
+}
+
+@media (max-width: 800px) {
+    section img {
+        width: 80vw;
+    }
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 600;
+}
+
+section.s2, section.section-cta {
+    color: #ffffff;
+}
+
+/* ---------- Stamps ---------- */
+div.stamps {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+}
+
+div.stamps img {
+    position: absolute;
+    animation: spin 30s linear infinite;
+}
