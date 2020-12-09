@@ -191,6 +191,7 @@ section.s2, section.section-cta {
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
+    
 }
 
 .create-account {
@@ -207,11 +208,14 @@ a.button {
     border-radius: 15px;
     padding: 0.5em 1.5em;
     transition: background-color 0.3s;
+    box-shadow: 3px 5px #5E6C9B;
+    transition: box-shadow 0.3s;
 }
 
 a.button:hover {
     background-color: #5E6C9B;
     color: white;
+    box-shadow: none;
 }
 
 .create-account {
