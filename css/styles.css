@@ -237,16 +237,3 @@ footer {
     padding: 30px 20px;
 
 }
-
-/* ---------- Stamps ---------- */
-div.stamps {
-    position: absolute;
-    top: 0;
-    left: 50%;
-    width: 50%;
-}
-
-div.stamps img {
-    position: absolute;
-    animation: spin 30s linear infinite;
-}
