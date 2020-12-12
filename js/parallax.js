@@ -7,23 +7,22 @@ const addMovement = function () {
 
     sections.forEach((section, index) => {
 
-            // find middle of each section
-            const topSection = section.offsetTop;
-            const midSection = topSection + (section.offsetHeight / 2);
+        // find middle of each section
+        const topSection = section.offsetTop;
+        const midSection = topSection + (section.offsetHeight / 2);
 
-            // compare how far we've scrolled from middle
-            const distanceToSection = midViewport - midSection;
+        // compare how far we've scrolled from middle
+        const distanceToSection = midViewport - midSection;
 
-            // pick tags to parallax
-            const image = section.querySelector("img");
-            const contentTag = section.querySelector("div");
+        // pick tags to parallax
+        const image = section.querySelector("img");
+        const contentTag = section.querySelector("div");
 
-            // weight down the distance
-            let rotation = distanceToSection / 100;
-            let contentDist = -1 * distanceToSection / 2;
+        // weight down the distance
+        let rotation = distanceToSection / 100;
+        let contentDist = -1 * distanceToSection / 2;
 
-                    //not the last one
-        console.log(index)
+        //not the last one
         if (index < (sections.length - 1)) {
             // for all even sections, rotate the other way
             if (index % 2 == 1) {
