@@ -30,9 +30,12 @@ const addMovement = function () {
             }
 
             // apply some parallax
-            // image.style.transform = `rotate(${rotation}deg)`
             contentTag.style.top = `${contentDist}px`
-            // contentTag.style.transform = `rotate(${-1 * rotation}deg)`
+            // avoid weird bug on mobile
+            if (screen.width > 800) {
+                image.style.transform = `rotate(${rotation}deg)`
+                contentTag.style.transform = `rotate(${-1 * rotation}deg)`
+            }
         }
 
 
