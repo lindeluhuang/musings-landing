@@ -9,6 +9,7 @@
 body,html {
     margin: 0;
     padding: 0;
+    overflow-x: hidden;
 }
 * {
     box-sizing: border-box;
@@ -29,12 +30,6 @@ body {
     margin-top: 240px;
 }
 
-@media (max-width: 800px) {
-    body {
-        padding: 0 20px;
-    }
-
-}
 
 a {
     color: #5E6C9B;
@@ -77,6 +72,22 @@ header a {
     font-size: 0.8em;
 }
 
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        height: 140px;
+    }
+
+    header nav {
+        text-align: center;
+    }
+
+    header a {
+        margin: 0 10px;
+        font-size: 0.8em;
+    }
+}
+
 header a:hover {
     color:  #373737;
 }
@@ -84,6 +95,12 @@ header a:hover {
 header.scrolled {
     background-color: #ffffff;
     height: 65px;
+}
+
+@media (max-width: 800px) {
+    header.scrolled {
+        height: 110px;
+    }
 }
 
 header img {
@@ -104,6 +121,13 @@ section {
     justify-content: space-between;
     align-items: center;
     padding: 0 60px;
+}
+
+@media (max-width: 800px) {
+    section {
+        padding: 0 30px;
+    }
+
 }
 
 section:nth-child(odd) {
@@ -190,8 +214,14 @@ section.s2, section.section-cta {
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    align-items: center;
-    
+    align-items: stretch;
+}
+
+@media (max-width: 800px) {
+    .cta-buttons {
+        flex-direction: column;
+
+    }
 }
 
 .create-account {
@@ -199,9 +229,9 @@ section.s2, section.section-cta {
 }
 
 a.button {
+    flex-grow: 1;
     text-align: center;
     font-size: 0.9em;
-    flex: 1;
     display: inline-block;
     color: #373737;
     background-color: #BAC4E4;
@@ -226,11 +256,18 @@ a.button:hover {
     margin-left: 10px;
 }
 
+@media (max-width: 800px) {
+    a.button {
+        margin: 20px 0 0 0;
+    }
+}
+
+
 
 /* ---------- Footer ---------- */
 
 footer {
-    width: 100vw;
+    width: 100%;
     background-color: #d3d4d8;
     text-align: center;
     font-size: 0.7em;
