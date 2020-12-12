@@ -70,22 +70,6 @@ header a {
     font-size: 0.8em;
 }
 
-@media (max-width: 800px) {
-    header {
-        flex-direction: column;
-        height: 110px;
-        padding: 0;
-    }
-
-    header nav {
-        text-align: center;
-    }
-
-    header a {
-        margin: 0 10px;
-        font-size: 0.8em;
-    }
-}
 
 header a:hover {
     color:  #373737;
@@ -109,6 +93,27 @@ header img {
     transform: translate(0, 3px);
 }
 
+
+@media (max-width: 800px) {
+    header {
+        flex-direction: column;
+        height: 110px;
+        padding: 0;
+    }
+
+    header nav {
+        text-align: center;
+    }
+
+    header a {
+        margin: 0 10px;
+        font-size: 0.8em;
+    }
+
+    header img {
+        transform: translate(0, 10px);
+    }
+}
 
 /* ---------- Each Section ---------- */
 section {
